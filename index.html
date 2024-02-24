@@ -1,50 +1,85 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .header {
+      background-color: #343a40;
+      color: #ffffff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .about-me {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .works-carousel {
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .works-carousel h3 {
+      margin-bottom: 20px;
+    }
+    .carousel-item img {
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Portfolio</h1>
+  </div>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
-  </head>
-  <body>
-
-<div class="container-fluid bg-dark">
+  <div class="container-fluid mt-4">
     <div class="row">
-        <div class="col-3">
-            <div class="card1 m-3">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://heroshotphotography.com/wp-content/uploads/2023/03/male-linkedin-corporate-headshot-on-white-square-1024x1024.jpg" class="card-img-top" alt="...">
-                    <div class="card-body bg-dark text-white">
-                      <h5 class="card-title">Bojan Brkic</h5>
-                      <p class="card-text">bojanbrkic@gmail.com</p>
-                      <p class="card-text">Web Developer</p>
-                      <a href="https://bojs225.github.io/izrada-web-stranice-web-shop-bojs225/" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                  </div>
+      <div class="col-md-4 about-me">
+        <img src="https://easydrawingguides.com/wp-content/uploads/2022/08/cartoon-face-11.png" class="img-fluid rounded-circle mb-3" style="height: 300px; width: 300px;">
+        <h3 class="mb-3">Bojan Brkić</h3>
+        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae sapien sit amet mauris aliquet dictum. Nullam sit amet felis nec nunc ultrices sodales.</p>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-decoration-none fs-5 text-dark">Projekti</a></li>
+          <li><a href="#" class="text-decoration-none fs-5 text-dark">Aplikacije</a></li>
+          <li><a href="#" class="text-decoration-none fs-5 text-dark">Igre</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-8 works-carousel">
+        <h3>Moji Radovi</h3>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://t4.ftcdn.net/jpg/02/81/25/31/360_F_281253189_A1GYRtKi8dKiZYip4yerjW8qTWG7KdgL.jpg" class="d-block w-100" >
             </div>
+            <div class="carousel-item">
+              <img src="https://img.freepik.com/free-vector/blank-farm-scene-cartoon-style_1308-52834.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1708560000&semt=ais" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+              <img src="https://img.freepik.com/free-vector/farm-scene-daytime-with-old-farmer-man-cute-animals_1308-61404.jpg" class="d-block w-100">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <div class="col-9">
-
-        </div>
+      </div>
     </div>
-</div>
+  </div>
 
-
-
-
-
-
-
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
