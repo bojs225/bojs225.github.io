@@ -1,8 +1,4 @@
-/*
-	Highlights by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+
 
 (function($) {
 
@@ -10,7 +6,7 @@
 		$body = $('body'),
 		$html = $('html');
 
-	// Breakpoints.
+	
 		breakpoints({
 			large:   [ '981px',  '1680px' ],
 			medium:  [ '737px',  '980px'  ],
@@ -18,34 +14,28 @@
 			xsmall:  [ null,     '480px'  ]
 		});
 
-	// Play initial animations on page load.
 		$window.on('load', function() {
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
 			}, 100);
 		});
 
-	// Touch mode.
 		if (browser.mobile) {
 
 			var $wrapper;
 
-			// Create wrapper.
 				$body.wrapInner('<div id="wrapper" />');
 				$wrapper = $('#wrapper');
 
-				// Hack: iOS vh bug.
 					if (browser.os == 'ios')
 						$wrapper
 							.css('margin-top', -25)
 							.css('padding-bottom', 25);
 
-				// Pass scroll event to window.
 					$wrapper.on('scroll', function() {
 						$window.trigger('scroll');
 					});
 
-			// Scrolly.
 				$window.on('load.hl_scrolly', function() {
 
 					$('.scrolly').scrolly({
@@ -58,25 +48,21 @@
 
 				});
 
-			// Enable touch mode.
 				$html.addClass('is-touch');
 
 		}
 		else {
 
-			// Scrolly.
 				$('.scrolly').scrolly({
 					speed: 1500
 				});
 
 		}
 
-	// Header.
 		var $header = $('#header'),
 			$headerTitle = $header.find('header'),
 			$headerContainer = $header.find('.container');
 
-		// Make title fixed.
 			if (!browser.mobile) {
 
 				$window.on('load.hl_headerTitle', function() {
@@ -111,7 +97,6 @@
 
 			}
 
-		// Scrollex.
 			breakpoints.on('>small', function() {
 				$header.scrollex({
 					terminate: function() {
@@ -121,7 +106,6 @@
 					},
 					scroll: function(progress) {
 
-						// Fade out title as user scrolls down.
 							if (progress > 0.5)
 								x = 1 - progress;
 							else
@@ -139,7 +123,6 @@
 
 			});
 
-	// Main sections.
 		$('.main').each(function() {
 
 			var $this = $(this),
@@ -147,18 +130,15 @@
 				$bg,
 				options;
 
-			// No primary image? Bail.
 				if ($primaryImg.length == 0)
 					return;
 
-			// Create bg and append it to body.
 				$bg = $('<div class="main-bg" id="' + $this.attr('id') + '-bg"></div>')
 					.css('background-image', (
 						'url("assets/css/images/overlay.png"), url("' + $primaryImg.attr('src') + '")'
 					))
 					.appendTo($body);
 
-			// Scrollex.
 				$this.scrollex({
 					mode: 'middle',
 					delay: 200,
